@@ -37,7 +37,7 @@ const Servicehero = () => {
         {/* Visual Element */}
         <div className="relative">
           <div className="absolute -inset-2 bg-emerald-500/20 rounded-full blur-3xl opacity-50"></div>
-          <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+          <div className="relative  rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
             <Image 
               src="/manager.png"  // Replace with your actual image
               width={600} 

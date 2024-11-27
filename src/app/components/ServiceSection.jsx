@@ -4,6 +4,8 @@ import React from "react";
 import Circle from "./Circle";
 
 import { useState } from "react";
+import Link from "next/link";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const ServiceCard = ({ src, title, description }) => {
     const [hovered, setHovered] = useState(false);
@@ -26,17 +28,15 @@ const ServiceCard = ({ src, title, description }) => {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
             <p className="text-gray-400 mb-6">{description}</p>
-            <button className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors duration-300">
-                <span className="font-semibold">LEARN MORE</span>
-                <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                >
-                    <path d="M5 12h14m-7-7l7 7-7 7" />
-                </svg>
+            <button className="flex items-center gap-2 hover:scale-105  text-emerald-400 hover:text-emerald-300 transition-all duration-300">
+            <Link
+                target="_blank"
+                href="mailto:ajabbar1234@gmail.com"
+                className="mt-1 uppercase"
+              >
+                Learn More
+              </Link>
+              <AiOutlineArrowRight />
             </button>
         </div>
     );
