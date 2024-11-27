@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useRef } from 'react'
-import About from '../components/About'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Lenis from '@studio-freight/lenis'
@@ -8,7 +7,7 @@ import gsap from 'gsap'
 import ServicesSection from '../components/ServiceSection'
 import Servicehero from '../components/Servicehero'
 
-const page = () => {
+const Page = () => {
 
   const circleRef = useRef(null);
   const lenisRef = useRef(null);
@@ -81,4 +80,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

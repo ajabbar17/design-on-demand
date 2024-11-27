@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import Lenis from '@studio-freight/lenis'
 import gsap from 'gsap'
 
-const page = () => {
+const Page = () => {
 
   const circleRef = useRef(null);
   const lenisRef = useRef(null);
@@ -79,4 +79,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
