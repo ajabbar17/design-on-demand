@@ -39,7 +39,7 @@ const Recent = () => {
         className="text-white text-lg md:text-2xl font-semibold mt-6 md:mt-9"
         style={{ y: para, opacity }}
       >
-        TRANSFORMING IDEAS INTO IMPACTFUL PRODUCTS. LET'S COLLABORATE ON YOUR NEXT INNOVATION!
+        TRANSFORMING IDEAS INTO IMPACTFUL PRODUCTS. LET&apos;S COLLABORATE ON YOUR NEXT INNOVATION!
       </motion.p>
     </div>
   );

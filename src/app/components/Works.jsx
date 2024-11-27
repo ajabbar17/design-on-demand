@@ -6,43 +6,29 @@ import Image from "next/image";
 const Works = () => {
   const ref = useRef(null);
 
-  // More precise scroll tracking
+  // Track scroll progress
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
-  // Refined animation creator with earlier start and more complete animations
-  const createAnimationProps = (startScroll, endScroll, isReverse = false) => {
-    return {
-      imageX: useTransform(
-        scrollYProgress, 
-        [startScroll, endScroll], 
-        isReverse ? [-500, 0] : [500, 0]
-      ),
-      imageRotate: useTransform(
-        scrollYProgress, 
-        [startScroll, endScroll], 
-        isReverse ? [-15, 0] : [15, 0]
-      ),
-      textY: useTransform(
-        scrollYProgress, 
-        [startScroll - 0.05, endScroll], 
-        [300, 0]
-      ),
-      textOpacity: useTransform(
-        scrollYProgress, 
-        [startScroll, endScroll], 
-        [0, 1]
-      )
-    };
-  };
+  // Section 1 animations
+  const section1ImageX = useTransform(scrollYProgress, [0.07, 0.24], [500, 0]);
+  const section1ImageRotate = useTransform(scrollYProgress, [0.07, 0.24], [15, 0]);
+  const section1TextY = useTransform(scrollYProgress, [0.02, 0.24], [300, 0]);
+  const section1TextOpacity = useTransform(scrollYProgress, [0.07, 0.24], [0, 1]);
 
-  // Create animation properties for each section
-  // Adjusted to start earlier and cover more of the scroll range
-  const section1Animations = createAnimationProps(0.07, 0.24);
-  const section2Animations = createAnimationProps(0.22, 0.48, true); // Reverse for second section
-  const section3Animations = createAnimationProps(0.5, 0.74);
+  // Section 2 animations
+  const section2ImageX = useTransform(scrollYProgress, [0.22, 0.48], [-500, 0]);
+  const section2ImageRotate = useTransform(scrollYProgress, [0.22, 0.48], [-15, 0]);
+  const section2TextY = useTransform(scrollYProgress, [0.17, 0.48], [300, 0]);
+  const section2TextOpacity = useTransform(scrollYProgress, [0.22, 0.48], [0, 1]);
+
+  // Section 3 animations
+  const section3ImageX = useTransform(scrollYProgress, [0.5, 0.74], [500, 0]);
+  const section3ImageRotate = useTransform(scrollYProgress, [0.5, 0.74], [15, 0]);
+  const section3TextY = useTransform(scrollYProgress, [0.45, 0.74], [300, 0]);
+  const section3TextOpacity = useTransform(scrollYProgress, [0.5, 0.74], [0, 1]);
 
   return (
     <div ref={ref} id="work" className="">
@@ -53,18 +39,18 @@ const Works = () => {
           <div className="text-center w-full md:text-left">
             <motion.h1
               className="text-4xl md:text-8xl font-extrabold text-white"
-              style={{ 
-                y: section1Animations.textY, 
-                opacity: section1Animations.textOpacity 
+              style={{
+                y: section1TextY,
+                opacity: section1TextOpacity,
               }}
             >
               RO FOOTBALL CLUB
             </motion.h1>
             <motion.p
               className="text-lg md:text-2xl text-gray-400 mt-4"
-              style={{ 
-                y: section1Animations.textY, 
-                opacity: section1Animations.textOpacity 
+              style={{
+                y: section1TextY,
+                opacity: section1TextOpacity,
               }}
             >
               Designed and delivered dynamic social media posters for Ro Football Club, showcasing the spirit of the game through bold visuals and engaging content.
@@ -74,9 +60,9 @@ const Works = () => {
           <div className="relative w-full">
             <motion.div
               className="w-full md:w-[46vw] h-[40vh] md:h-[76vh] bg-gray-800 rounded-3xl shadow-lg overflow-hidden"
-              style={{ 
-                x: section1Animations.imageX, 
-                rotate: section1Animations.imageRotate 
+              style={{
+                x: section1ImageX,
+                rotate: section1ImageRotate,
               }}
             >
               <Image
@@ -98,9 +84,9 @@ const Works = () => {
           <div className="relative order-last md:order-first">
             <motion.div
               className="w-full md:w-[46vw] h-[40vh] md:h-[76vh] bg-gray-800 rounded-3xl shadow-lg overflow-hidden"
-              style={{ 
-                x: section2Animations.imageX, 
-                rotate: section2Animations.imageRotate 
+              style={{
+                x: section2ImageX,
+                rotate: section2ImageRotate,
               }}
             >
               <Image
@@ -116,18 +102,18 @@ const Works = () => {
           <div className="text-center md:text-right">
             <motion.h1
               className="text-4xl md:text-8xl font-extrabold text-white"
-              style={{ 
-                y: section2Animations.textY, 
-                opacity: section2Animations.textOpacity 
+              style={{
+                y: section2TextY,
+                opacity: section2TextOpacity,
               }}
             >
               Street Cop Training
             </motion.h1>
             <motion.p
               className="text-lg md:text-2xl text-gray-400 mt-4"
-              style={{ 
-                y: section2Animations.textY, 
-                opacity: section2Animations.textOpacity 
+              style={{
+                y: section2TextY,
+                opacity: section2TextOpacity,
               }}
             >
               Crafted impactful testimonial designs for Street Cop Training, highlighting real-life success stories and experiences.
@@ -143,18 +129,18 @@ const Works = () => {
           <div className="text-center md:text-left">
             <motion.h1
               className="text-4xl md:text-8xl font-extrabold text-white"
-              style={{ 
-                y: section3Animations.textY, 
-                opacity: section3Animations.textOpacity 
+              style={{
+                y: section3TextY,
+                opacity: section3TextOpacity,
               }}
             >
               KNOCK
             </motion.h1>
             <motion.p
               className="text-lg md:text-2xl text-gray-400 mt-4"
-              style={{ 
-                y: section3Animations.textY, 
-                opacity: section3Animations.textOpacity 
+              style={{
+                y: section3TextY,
+                opacity: section3TextOpacity,
               }}
             >
               Designed and delivered Google Ads for Knock that captivate and convert, crafted with precision to ensure impactful visuals and clear messaging that drive results.
@@ -164,9 +150,9 @@ const Works = () => {
           <div className="relative w-full">
             <motion.div
               className="w-full md:w-[46vw] h-[40vh] md:h-[76vh] bg-gray-800 rounded-3xl shadow-lg overflow-hidden"
-              style={{ 
-                x: section3Animations.imageX, 
-                rotate: section3Animations.imageRotate 
+              style={{
+                x: section3ImageX,
+                rotate: section3ImageRotate,
               }}
             >
               <Image
