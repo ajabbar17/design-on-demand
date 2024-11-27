@@ -68,9 +68,9 @@ export default function Home() {
     };
   }, []);
 
-  // if (loading) {
-  //   return <Loading />;
-  // }
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="bg-[#1b1f23]">
