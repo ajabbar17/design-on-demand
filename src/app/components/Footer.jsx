@@ -32,7 +32,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={portfolioRef} className="bg-[#20252a] text-[#fff] py-16 px-4 md:px-20">
+    <footer ref={portfolioRef} className="bg-[#20252a] text-[#fff] py-24 px-4 md:px-20">
       <div className="text-center md:text-left">
         <h1 className="text-5xl md:text-7xl font-bold mb-8">
           {/* Split each letter into a span and add a gap after "SAY" */}
