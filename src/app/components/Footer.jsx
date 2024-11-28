@@ -4,16 +4,19 @@ import React, { useRef } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { usePathname } from 'next/navigation';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const portfolioRef = useRef(null);
+  const pathname = usePathname();
 
   useGSAP(() => {
     const letters = portfolioRef.current.querySelectorAll('.letter');
 
-    gsap.fromTo(
+    const animation = gsap.fromTo(
       letters,
       { y: '70%', opacity: 0 },
       {
@@ -29,7 +32,8 @@ const Footer = () => {
         },
       }
     );
-  }, []);
+    
+  }, [pathname]);
 
   return (
     <footer ref={portfolioRef} className="bg-[#20252a] text-[#fff] py-24 px-4 md:px-20">

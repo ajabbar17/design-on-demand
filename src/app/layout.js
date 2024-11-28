@@ -1,5 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Leniscomp from "./components/Lenis";
+import Mouse from "./components/Mouse";
 
 
 const novaSemiBold = localFont({
@@ -31,8 +35,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={novaSemiBold.className}>
-
+        <Navbar />
+        <Leniscomp />
+        <Mouse />
         {children}
+        <Footer />
 
       </body>
     </html>

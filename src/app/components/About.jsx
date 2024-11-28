@@ -15,17 +15,22 @@ const About = () => {
     {
       title: "Our History",
       content:
-        "Our journey began with a vision to bridge the gap between creativity and technology. Starting as a small team of passionate individuals, we have grown into a trusted digital agency, delivering transformative solutions across industries.",
+        `Our journey began with a vision to bridge the gap between creativity and technology. Starting as a small team of passionate 
+        individuals, we have grown into a trusted digital agency, delivering transformative solutions across industries. Each milestone 
+        in our history reflects our dedication to innovation, client success, and a commitment to pushing the boundaries of digital excellence. 
+        Over the years, we have expanded our expertise, diversified our services, and built a legacy of 
+        trust and excellence. From overcoming challenges to celebrating achievements, our history is a testament to our resilience, creativity,
+         and the enduring relationships we&apos;ve forged with our clients.`,
     },
     {
       title: "Our Mission",
       content:
-        "Our mission is to empower businesses by providing innovative digital solutions tailored to their unique needs. We strive to deliver excellence, foster creativity, and ensure meaningful results for our clients.",
+        "Our mission is to empower businesses with innovative digital solutions that drive growth, enhance engagement, and deliver measurable success. We strive to create impactful strategies tailored to meet the unique needs of our clients. By combining cutting-edge technology, creative expertise, and data-driven insights, we help businesses unlock their full potential. Our mission extends beyond delivering results—we aim to build meaningful relationships, inspire transformation, and create a sustainable impact on the industries we serve.",
     },
     {
       title: "Our Vision",
       content:
-        "Our vision is to become a global leader in the digital landscape, known for delivering exceptional value and fostering long-term partnerships. We aim to shape the future of businesses through creativity, technology, and a commitment to excellence.",
+        "Our vision is to become a global leader in the digital landscape, known for delivering exceptional value and fostering long-term partnerships. We aim to shape the future of businesses through creativity, technology, and a commitment to excellence. By continually embracing innovation and adapting to the evolving digital ecosystem, we envision a future where businesses thrive in a connected, technology-driven world. Our vision is to inspire trust, empower change, and contribute to the success stories of businesses worldwide.",
     },
   ];
 
@@ -86,7 +91,7 @@ const About = () => {
                   activeIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="mt-4 text-gray-400">{item.content}</p>
+                <p className="mt-4 text-gray-200 text-lg">{item.content}</p>
               </div>
             </div>
           ))}

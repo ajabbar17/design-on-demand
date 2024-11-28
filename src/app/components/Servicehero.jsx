@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Servicehero = () => {
   return (
     <section className="relative bg-[#1b1f23] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 items-center gap-12">
+      <div className="max-w-7xl mx-auto  px-6 py-20 grid md:grid-cols-2 items-center gap-12">
         {/* Text Content */}
         <div className="space-y-6">
           <div className="overflow-hidden">
@@ -50,10 +50,10 @@ const Servicehero = () => {
       </div>
 
       {/* Background Decoration */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+      {/* <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 left-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl"></div>
-      </div>
+      </div> */}
     </section>
   );
 };
