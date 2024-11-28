@@ -6,6 +6,8 @@ import { useEffect,  useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Loading from "./components/Loading";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,13 +28,13 @@ export default function Home() {
 
   return (
     <div className="bg-[#1b1f23]">
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <About />
       <ServicesSection />
       <Recent />
       <Works />
-      {/* <Footer /> */}
+      <Footer />
     
     </div>
   );
