@@ -5,6 +5,7 @@ import Works from "./components/Works";
 import { useEffect,  useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Loading from "./components/Loading";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
