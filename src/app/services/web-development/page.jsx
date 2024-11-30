@@ -1,5 +1,6 @@
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
+import Projects from '@/app/components/Projects';
 import ServiceCard from '@/app/components/ServiceCard';
 import React from 'react'
 
@@ -16,12 +17,23 @@ const page = () => {
           Web development is all about creating websites that truly relate to your brand voice and vision. 
           We offer more than mere coding; we develop an online home for your business. 
         `
-      };
+      }
+
+      const projectData = {
+        img1: "/webproject.png", // Add a relevant image to your public folder
+        img2: "/nebula.png", // Add a relevant image to your public folder
+        title1: "PAIZLY",
+        title2: "NEBULA",
+        tags1: ["Web Development", "UI/UX", "ECOMMERCE"],
+        tags2: ["CMS", "UI/UX", "ECOMMERCE"],
+      }
     
       return (
       <div>
         <Navbar />
       <ServiceCard {...serviceData} />
+      <h1 className="text-center text-7xl text-white font-semibold mt-20">Our Projects</h1>
+      <Projects {...projectData} />
       <Footer />
       </div>
       

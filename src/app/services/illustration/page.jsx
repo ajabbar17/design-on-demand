@@ -1,5 +1,6 @@
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
+import Projects from '@/app/components/Projects';
 import ServiceCard from '@/app/components/ServiceCard';
 import React from 'react'
 
@@ -17,10 +18,23 @@ const page = () => {
           Discover the power of storytelling through visuals crafted uniquely for you.
         `,
       };
+
+      const projectData = {
+        img1: "/ill1.png", // Add a relevant image to your public folder
+        img2: "/ill2.png", // Add a relevant image to your public folder
+        title1: "DAY-DAWN-NIGHT",
+        title2: "HERITAGE",
+        tags1: ["CONCEPT ART", "ILLUSTRATION","TIME"],
+        tags2: ["REALITY","HERITAGE","ILLUSTRATION"],
+      }
+    
+
       return (
       <div>
         <Navbar />
       <ServiceCard {...illustrationData} />
+      <h1 className="text-center text-7xl text-white font-semibold mt-20">Our Projects</h1>
+      <Projects {...projectData} />
       <Footer />
       </div>
       
