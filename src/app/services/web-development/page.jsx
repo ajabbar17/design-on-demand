@@ -21,9 +21,9 @@ const page = () => {
 
       const projectData = {
         img1: "/webproject.png", // Add a relevant image to your public folder
-        img2: "/nebula.png", // Add a relevant image to your public folder
+        img2: "/myorah.png", // Add a relevant image to your public folder
         title1: "PAIZLY",
-        title2: "NEBULA",
+        title2: "MYORAH",
         tags1: ["Web Development", "UI/UX", "ECOMMERCE"],
         tags2: ["CMS", "UI/UX", "ECOMMERCE"],
       }
@@ -32,7 +32,7 @@ const page = () => {
       <div>
         <Navbar />
       <ServiceCard {...serviceData} />
-      <h1 className="text-center text-7xl text-white font-semibold mt-20">Our Projects</h1>
+      <h1 className="text-center text-5xl md:text-7xl text-white font-semibold mt-20">Our Projects</h1>
       <Projects {...projectData} />
       <Footer />
       </div>

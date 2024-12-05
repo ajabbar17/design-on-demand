@@ -33,7 +33,7 @@ const page = () => {
       <div>
         <Navbar />
       <ServiceCard {...illustrationData} />
-      <h1 className="text-center text-7xl text-white font-semibold mt-20">Our Projects</h1>
+      <h1 className="text-center text-5xl md:text-7xl text-white font-semibold mt-20">Our Projects</h1>
       <Projects {...projectData} />
       <Footer />
       </div>

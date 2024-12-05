@@ -10,7 +10,7 @@ const ServiceCard = ({ imageUrl, heading, breadcrumb, title, description, subTit
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="text-center z-10 text-white">
-          <h1 className="text-5xl font-bold">{heading}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">{heading}</h1>
           <p className="mt-2 text-lg">{breadcrumb}</p>
         </div>
 
@@ -18,7 +18,7 @@ const ServiceCard = ({ imageUrl, heading, breadcrumb, title, description, subTit
       </div>
 
       {/* Content Section */}
-      <div className="container mx-auto md:px-40 p-7 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto lg:px-40 p-7 md:py-16 grid lg:grid-cols-2 gap-8 items-center">
         {/* Image */}
         <div>
           <img src={imageUrl} alt={heading} className="rounded-lg shadow-lg" />
