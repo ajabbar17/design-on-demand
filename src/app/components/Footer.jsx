@@ -56,7 +56,7 @@ const Footer = () => {
             <button className="flex items-center justify-center px-6 py-2 border md:w-1/3 border-[#ffffff83] rounded hover:bg-[#1b1f23] outline-none hover:text-white transition-all">
             <Link
                 target="_blank"
-                href="mailto:ajabbar1234@gmail.com"
+                href="mailto:info@designondemand.solutions"
                 className="mb-1 uppercase hover:scale-105 transition-all"
               >
                 Contact Us
@@ -79,7 +79,7 @@ const Footer = () => {
               <span className="font-bold mb-2">[CONTACT]</span>
               <Link
                 target="_blank"
-                href="mailto:ajabbar1234@gmail.com"
+                href="mailto:info@designondemand.solutions"
                 className="mb-1 font-bold hover:scale-105 transition-all"
               >
                 EMAIL

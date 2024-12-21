@@ -131,18 +131,15 @@ const Hero = () => {
                 Explore work
               </Link>
         </button>
-        <button
-          className="bg-white text-black hover:bg-transparent hover:text-white py-3 px-10 font-bold rounded-3xl text-lg hover:border-2 transition"
+        <Link
+          className="bg-white text-black hover:bg-transparent hover:text-white py-3 px-10 font-bold rounded-3xl text-xl hover:border-2 transition"
           ref={(el) => (buttonsRef.current[1] = el)}
-        >
-           <Link
-                target="_blank"
-                href="mailto:ajabbar1234@gmail.com"
-                className="mb-1 hover:scale-105 transition-all"
-              >
-                Get in touch
-              </Link>
-        </button>
+          target="_blank"
+          href="mailto:info@designondemand.solutions"
+                  >
+                    Get in touch
+          
+        </Link>
       </div>
     </section>
   );
