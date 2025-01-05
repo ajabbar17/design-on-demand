@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Leniscomp from "./components/Lenis";
 import Mouse from "./components/Mouse";
+import { Analytics } from '@vercel/analytics/next';
+
 
 export const metadata = {
   title: {
@@ -72,6 +74,7 @@ export default function RootLayout({ children }) {
         <Leniscomp />
         <Mouse />
         {children}
+        <Analytics/>
       </body>
     </html>
   );
