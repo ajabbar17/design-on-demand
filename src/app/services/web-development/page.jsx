@@ -2,43 +2,70 @@ import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
 import Projects from '@/app/components/Projects';
 import ServiceCard from '@/app/components/ServiceCard';
-import React from 'react'
+import React from 'react';
+
+export const metadata = {
+  title: "Web Development",
+  description: "Expert web development services delivering custom websites, e-commerce solutions, and CMS development. We create responsive, user-friendly websites that drive business growth and enhance your online presence.",
+  keywords: [
+    "web development",
+    "custom website development",
+    "e-commerce development",
+    "CMS development",
+    "responsive web design",
+    "UI/UX development",
+    "frontend development",
+    "backend development",
+    "website solutions",
+    "professional web developer"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1
+    }
+  },
+  alternates: {
+    canonical: "https://www.designondemand.solutions/web-development"
+  }
+};
 
 const page = () => {
-    const serviceData = {
-        imageUrl: "/web2.jpg", // Add a relevant image to your public folder
-        heading: "Web Development",
-        breadcrumb: "Home > Web Development",
-        title: "Secure Your Online Presence With Premier Web Development Services",
-        subTitle: "WEB DEVELOPMENT",
-        description: `
-          Our web development services turn ideas into reality on the internet. We bring your brand online, 
-          where it shines through in every click and scroll.
-          Web development is all about creating websites that truly relate to your brand voice and vision. 
-          We offer more than mere coding; we develop an online home for your business. 
-        `
-      }
+  const serviceData = {
+    imageUrl: "/web2.jpg",
+    heading: "Web Development",
+    breadcrumb: "Home > Web Development",
+    title: "Secure Your Online Presence With Premier Web Development Services",
+    subTitle: "WEB DEVELOPMENT",
+    description: `
+      Our web development services turn ideas into reality on the internet. We bring your brand online, 
+      where it shines through in every click and scroll.
+      Web development is all about creating websites that truly relate to your brand voice and vision. 
+      We offer more than mere coding; we develop an online home for your business. 
+    `
+  }
 
-      const projectData = {
-        img1: "/webproject.png", // Add a relevant image to your public folder
-        img2: "/myorah.png", // Add a relevant image to your public folder
-        title1: "PAIZLY",
-        title2: "MYORAH",
-        tags1: ["Web Development", "UI/UX", "ECOMMERCE"],
-        tags2: ["CMS", "UI/UX", "ECOMMERCE"],
-      }
-    
-      return (
-      <div>
-        <Navbar />
+  const projectData = {
+    img1: "/webproject.png",
+    img2: "/myorah.png",
+    title1: "PAIZLY",
+    title2: "MYORAH",
+    tags1: ["Web Development", "UI/UX", "ECOMMERCE"],
+    tags2: ["CMS", "UI/UX", "ECOMMERCE"],
+  }
+
+  return (
+    <div>
+      <Navbar />
       <ServiceCard {...serviceData} />
       <h1 className="text-center text-5xl md:text-7xl text-white font-semibold mt-20">Our Projects</h1>
       <Projects {...projectData} />
       <Footer />
-      </div>
-      
-    )
-    };
+    </div>
+  );
+};
 
-
-export default page
+export default page;
