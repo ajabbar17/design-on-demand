@@ -91,7 +91,7 @@ const Hero = () => {
   return (
     <section className={`w-full text-white h-screen flex flex-col items-center justify-center ${isVisible ? 'opacity-100 ' : 'opacity-0'}  relative overflow-hidden`}>
       {/* Main Text */}
-      <div className="text-center overflow-hidden">
+      <div className="text-center px-3 overflow-hidden">
         <h1 className="text-5xl uppercase md:text-9xl font-bold">
           <span
             className="block"
@@ -132,7 +132,7 @@ const Hero = () => {
               </Link>
         </button>
         <Link
-          className="bg-white text-black hover:bg-transparent hover:text-white py-3 px-10 font-bold rounded-3xl text-xl hover:border-2 transition"
+          className="bg-white text-black hover:bg-transparent text-center hover:text-white py-3 px-10 font-bold rounded-3xl text-xl hover:border-2 transition"
           ref={(el) => (buttonsRef.current[1] = el)}
           target="_blank"
           href="mailto:info@designondemand.solutions"

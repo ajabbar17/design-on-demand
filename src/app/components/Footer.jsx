@@ -86,10 +86,17 @@ const Footer = () => {
               </Link>
               <Link
                 target='_blank'
-                href="https://www.linkedin.com/in/ahmed-jabbar-1bb113209/"
+                href="https://www.facebook.com/profile.php?id=61572182320201"
                 className="mb-1 font-bold hover:scale-105 transition-all"
               >
                 INSTAGRAM
+              </Link>
+              <Link
+                target='_blank'
+                href="https://www.instagram.com/dod_info/"
+                className="mb-1 font-bold hover:scale-105 transition-all"
+              >
+                FACEBOOK
               </Link>
              
             </div>

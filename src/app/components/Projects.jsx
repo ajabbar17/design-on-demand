@@ -18,12 +18,12 @@ const Projects = memo(({ img1, img2, title1, title2, tags1, tags2 }) => {
     const setupCardAnimation = async (cardRef, lettersRef) => {
       // Ensure GSAP is loaded
       const gsapModule = await import("gsap");
-      
+
       if (cardRef.current && lettersRef.current.length) {
         const letters = lettersRef.current.filter(Boolean);
         const timeline = gsapModule.gsap.timeline({ paused: true });
         gsapModule.gsap.set(letters, { opacity: 0, y: 10 });
-        
+
         letters.forEach((el, i) => {
           timeline.to(
             el,
@@ -75,7 +75,7 @@ const Projects = memo(({ img1, img2, title1, title2, tags1, tags2 }) => {
     // Use Promise.all for concurrent animation setup
     Promise.all([
       setupCardAnimation(card1Ref, lettersRef1),
-      setupCardAnimation(card2Ref, lettersRef2)
+      setupCardAnimation(card2Ref, lettersRef2),
     ]);
   }, []);
 
@@ -84,7 +84,7 @@ const Projects = memo(({ img1, img2, title1, title2, tags1, tags2 }) => {
       {/* Card 1 */}
       <div className="cardcontainer flex flex-col gap-4 w-full md:w-1/2 h-[50vh] md:h-[75vh] rounded">
         <div ref={card1Ref} className="card w-full h-full relative">
-          <h1 className="absolute left-1/4 md:left-full flex font-bold text-6xl md:text-8xl z-20 top-1/3 text-gray-500 md:-translate-x-1/2">
+          <h1 className="absolute left-1/2 -translate-x-1/2 md:left-full md:-translate-x-1/2 flex font-bold text-5xl md:text-8xl z-20 top-1/3 text-emerald-700">
             {title1.split("").map((letter, index) => (
               <span
                 key={`${letter}-${index}`}
@@ -123,7 +123,7 @@ const Projects = memo(({ img1, img2, title1, title2, tags1, tags2 }) => {
       {/* Card 2 */}
       <div className="cardcontainer flex flex-col gap-4 w-full md:w-1/2 h-[50vh] md:h-[75vh] rounded">
         <div ref={card2Ref} className="card w-full h-full relative">
-          <h1 className="absolute right-1/3 md:right-full flex font-bold text-6xl md:text-8xl z-20 top-1/3 text-gray-500 md:translate-x-1/2">
+          <h1 className="absolute left-1/2 -translate-x-1/2 md:right-full md:left-auto md:translate-x-1/2 flex font-bold text-6xl md:text-8xl z-20 top-1/3 text-emerald-700">
             {title2.split("").map((letter, index) => (
               <span
                 key={`${letter}-${index}`}
@@ -163,5 +163,5 @@ const Projects = memo(({ img1, img2, title1, title2, tags1, tags2 }) => {
   );
 });
 
-Projects.displayName = 'Projects';
+Projects.displayName = "Projects";
 export default Projects;
