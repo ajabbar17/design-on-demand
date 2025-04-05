@@ -1,5 +1,6 @@
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
+import Projects from '@/app/components/Projects';
 import ServiceCard from '@/app/components/ServiceCard';
 import React from 'react';
 
@@ -46,11 +47,18 @@ const page = () => {
       Build a digital presence that combines aesthetics with functionality seamlessly.
     `,
   };
+  const projectData = {
+    img1: "/design-mockup.png",
+    title1: "H2SIP",
+    tags1: ["WEB-DESIGN", "FIGMA"],
+  }
 
   return (
     <div>
       <Navbar />
       <ServiceCard {...webDesignData} />
+      <Projects {...projectData} />
+
       <Footer />
     </div>
   );
