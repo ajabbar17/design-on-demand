@@ -57,7 +57,7 @@ const Mouse = () => {
   return (
     <div
         ref={circleRef}
-        className="hidden md:block absolute z-30  w-6 h-6 bg-white rounded-full pointer-events-none shadow-md"
+        className="hidden md:block absolute z-30  w-6 h-6 bg-red-800 rounded-full pointer-events-none shadow-md"
         style={{
           top: 0,
           left: 0,

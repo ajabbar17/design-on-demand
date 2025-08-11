@@ -1,12 +1,13 @@
-import Footer from '@/app/components/Footer';
-import Navbar from '@/app/components/Navbar';
-import Projects from '@/app/components/Projects';
-import ServiceCard from '@/app/components/ServiceCard';
-import React from 'react';
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
+import Projects from "@/app/components/Projects";
+import ServiceCard from "@/app/components/ServiceCard";
+import React from "react";
 
 export const metadata = {
   title: "Marketing",
-  description: "Transform your brand's reach with our comprehensive marketing services. From digital campaigns to social media strategy, we deliver data-driven solutions that connect with your audience and drive measurable results.",
+  description:
+    "Transform your brand's reach with our comprehensive marketing services. From digital campaigns to social media strategy, we deliver data-driven solutions that connect with your audience and drive measurable results.",
   keywords: [
     "digital marketing",
     "social media marketing",
@@ -17,7 +18,7 @@ export const metadata = {
     "brand marketing",
     "social media strategy",
     "marketing campaigns",
-    "marketing solutions"
+    "marketing solutions",
   ],
   robots: {
     index: true,
@@ -25,17 +26,17 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1
-    }
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: "https://www.designondemand.solutions/marketing"
-  }
+    canonical: "https://www.designondemand.solutions/marketing",
+  },
 };
 
 const page = () => {
   const marketingData = {
-    imageUrl: "/marketing.jpg",
+    imageUrl: "/marketing.webp",
     heading: "Marketing",
     breadcrumb: "Home > Marketing",
     title: "Drive Growth and Engagement With Expert Marketing Strategies",
@@ -47,22 +48,24 @@ const page = () => {
       
       Let us help you tell your story in a way that captures attention and drives conversions.
     `,
-  }
+  };
 
   const projectData = {
-    img1: "/FBMG.png",
-    img2: "/Testimonial.jpg",
+    img1: "/FBMG.webp",
+    img2: "/Testimonial.webp",
     title1: "FBMG",
     title2: "STREET COP",
     tags1: ["MARKETING", "SOCIAL MEDIA"],
-    tags2: ["MARKETING","POSTS"],
-  }
+    tags2: ["MARKETING", "POSTS"],
+  };
 
   return (
-    <div>
+    <div className="bg-[#f8f9fa] text-[#1a1a1a] min-h-screen">
       <Navbar />
       <ServiceCard {...marketingData} />
-      <h1 className="text-center text-5xl md:text-7xl text-white font-semibold mt-20">Our Projects</h1>
+      {/* <h1 className="text-center text-5xl md:text-7xl text-[#1a1a1a] font-semibold mt-20">
+        Our Projects
+      </h1> */}
       <Projects {...projectData} />
       <Footer />
     </div>

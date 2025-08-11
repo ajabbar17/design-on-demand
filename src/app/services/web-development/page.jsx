@@ -1,12 +1,13 @@
-import Footer from '@/app/components/Footer';
-import Navbar from '@/app/components/Navbar';
-import Projects from '@/app/components/Projects';
-import ServiceCard from '@/app/components/ServiceCard';
-import React from 'react';
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
+import Projects from "@/app/components/Projects";
+import ServiceCard from "@/app/components/ServiceCard";
+import React from "react";
 
 export const metadata = {
   title: "Web Development",
-  description: "Expert web development services delivering custom websites, e-commerce solutions, and CMS development. We create responsive, user-friendly websites that drive business growth and enhance your online presence.",
+  description:
+    "Expert web development services delivering custom websites, e-commerce solutions, and CMS development. We create responsive, user-friendly websites that drive business growth and enhance your online presence.",
   keywords: [
     "web development",
     "custom website development",
@@ -17,7 +18,7 @@ export const metadata = {
     "frontend development",
     "backend development",
     "website solutions",
-    "professional web developer"
+    "professional web developer",
   ],
   robots: {
     index: true,
@@ -25,17 +26,17 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1
-    }
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: "https://www.designondemand.solutions/web-development"
-  }
+    canonical: "https://www.designondemand.solutions/web-development",
+  },
 };
 
 const page = () => {
   const serviceData = {
-    imageUrl: "/web2.jpg",
+    imageUrl: "/web2.webp",
     heading: "Web Development",
     breadcrumb: "Home > Web Development",
     title: "Secure Your Online Presence With Premier Web Development Services",
@@ -45,23 +46,25 @@ const page = () => {
       where it shines through in every click and scroll.
       Web development is all about creating websites that truly relate to your brand voice and vision. 
       We offer more than mere coding; we develop an online home for your business. 
-    `
-  }
+    `,
+  };
 
   const projectData = {
-    img1: "/webproject.png",
-    img2: "/myorah.png",
+    img1: "/webproject.webp",
+    img2: "/myorah.webp",
     title1: "PAIZLY",
     title2: "MYORAH",
     tags1: ["Web Development", "UI/UX", "ECOMMERCE"],
     tags2: ["CMS", "UI/UX", "ECOMMERCE"],
-  }
+  };
 
   return (
-    <div>
+    <div className="bg-[#f8f9fa] text-[#1a1a1a] min-h-screen">
       <Navbar />
       <ServiceCard {...serviceData} />
-      <h1 className="text-center text-5xl md:text-7xl text-white font-semibold mt-20">Our Projects</h1>
+      {/* <h1 className="text-center text-5xl md:text-7xl text-[#1a1a1a] font-semibold mt-20">
+        Our Projects
+      </h1> */}
       <Projects {...projectData} />
       <Footer />
     </div>

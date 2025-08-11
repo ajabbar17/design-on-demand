@@ -14,8 +14,7 @@ const About = () => {
   const accdata = [
     {
       title: "Our History",
-      content:
-        `Our journey began with a vision to bridge the gap between creativity and technology. Starting as a small team of passionate 
+      content: `Our journey began with a vision to bridge the gap between creativity and technology. Starting as a small team of passionate 
         individuals, we have grown into a trusted digital agency, delivering transformative solutions across industries. Each milestone 
         in our history reflects our dedication to innovation, client success, and a commitment to pushing the boundaries of digital excellence. 
         Over the years, we have expanded our expertise, diversified our services, and built a legacy of 
@@ -35,10 +34,10 @@ const About = () => {
   ];
 
   return (
-    <section className="w-full text-white py-6 md:h-[550px] md:py-12 px-6 md:px-12">
+    <section className="w-full text-[#1a1a1a] py-6 md:h-[550px] md:py-12 px-6 md:px-12">
       <div className="flex gap-3 w-full items-center md:flex-row flex-col md:items-start">
-        <div className="bg-[#272e33] h-6 mt-1 rounded-xl px-4">
-          <p className="uppercase text-lg tracking-widest text-center text-emerald-400 font-bold">
+        <div className="bg-[#e9ecef] h-6 mt-1 rounded-xl px-4">
+          <p className="uppercase text-lg tracking-widest text-center text-red-800 font-bold">
             Who we are
           </p>
         </div>
@@ -47,15 +46,16 @@ const About = () => {
       <div className="w-full gap-5 flex md:flex-row flex-col mx-auto">
         <div className="mb-8 w-full md:w-1/2">
           <p className="leading-relaxed text-2xl text-center md:text-start md:text-4xl">
-            At DESIGN ON DEMAND, we&apos;re more than just a digital services provider
-            we&apos;re a team of{" "}
-            <span className="text-emerald-500">
+            At DESIGN ON DEMAND, we&apos;re more than just a digital services
+            provider we&apos;re a team of{" "}
+            <span className="text-red-800">
               creative thinkers, tech enthusiasts, and marketing strategists
             </span>
             , passionate about helping brands thrive online. Our{" "}
-            <span className="text-emerald-500">mission</span> is to bring your{" "}
-            <span className="text-emerald-500">vision</span> to life through stunning web
-            design, functional development, eye-catching illustrations, and strategic digital marketing.
+            <span className="text-red-800">mission</span> is to bring your{" "}
+            <span className="text-red-800">vision</span> to life through
+            stunning web design, functional development, eye-catching
+            illustrations, and strategic digital marketing.
           </p>
         </div>
 
@@ -63,7 +63,7 @@ const About = () => {
           {accdata.map((item, index) => (
             <div
               key={index}
-              className="bg-[#272e33] hover:bg-[#2e363b] hover:ps-10 transition-all rounded-3xl shadow-lg p-4 cursor-pointer"
+              className="bg-[#e9ecef] hover:bg-[#dee2e6] hover:ps-10 tracking-wide transition-all rounded-3xl shadow-lg p-4 cursor-pointer"
               onClick={() => toggleAccordion(index)}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -71,7 +71,9 @@ const About = () => {
               <div className="flex justify-between items-center">
                 <h3
                   className={`font-semibold text-xl ${
-                    hoveredIndex === index ? "text-emerald-400" : "text-white"
+                    hoveredIndex === index
+                      ? "text-red-800"
+                      : "text-[#1a1a1a]"
                   }`}
                 >
                   {item.title}
@@ -80,7 +82,9 @@ const About = () => {
                   className={`transform ${
                     activeIndex === index ? "rotate-45" : "rotate-0"
                   } transition-transform p-2 rounded-xl ${
-                    hoveredIndex === index ? "bg-emerald-400" : "bg-[#2e363b]"
+                    hoveredIndex === index
+                      ? "bg-red-800 text-white"
+                      : "bg-[#dee2e6] text-[#1a1a1a]"
                   }`}
                 >
                   <AiOutlinePlus />
@@ -88,10 +92,12 @@ const About = () => {
               </div>
               <div
                 className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  activeIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  activeIndex === index
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="mt-4 text-gray-200 text-lg">{item.content}</p>
+                <p className="mt-4 text-gray-600 text-lg">{item.content}</p>
               </div>
             </div>
           ))}

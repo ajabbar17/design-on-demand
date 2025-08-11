@@ -13,6 +13,7 @@
     "@studio-freight/lenis": "^1.0.42",
     "@vercel/analytics": "^1.4.1",
     "gsap": "^3.12.5",
+    "lucide-react": "^0.537.0",
     "motion": "^11.11.17",
     "next": "15.0.3",
     "react": "^18.3.1",

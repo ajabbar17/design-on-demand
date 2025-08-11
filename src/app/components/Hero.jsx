@@ -17,7 +17,7 @@ const Hero = () => {
     // GSAP Timeline for animations
     const timeline = gsap.timeline({
       delay: 0.5,
-      onComplete: () => setIsAnimationComplete(true)
+      onComplete: () => setIsAnimationComplete(true),
     });
     setIsVisible(true);
 
@@ -25,11 +25,11 @@ const Hero = () => {
     timeline.fromTo(
       firstSpanRef.current,
       { opacity: 0, rotateX: 45 },
-      { 
-        opacity: 1, 
-        rotateX: 0, 
-        duration: 0.76, 
-        ease: "power2.out" 
+      {
+        opacity: 1,
+        rotateX: 0,
+        duration: 0.76,
+        ease: "power2.out",
       }
     );
 
@@ -37,11 +37,11 @@ const Hero = () => {
     timeline.fromTo(
       secondSpanRef.current,
       { opacity: 0, rotateX: 90 },
-      { 
-        opacity: 1, 
-        rotateX: 0, 
-        duration: 1, 
-        ease: "power2.out" 
+      {
+        opacity: 1,
+        rotateX: 0,
+        duration: 1,
+        ease: "power2.out",
       },
       "+=0.1"
     );
@@ -50,11 +50,11 @@ const Hero = () => {
     timeline.fromTo(
       para.current,
       { opacity: 0, y: 50 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 0.8, 
-        ease: "power1.inOut" 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power1.inOut",
       }
     );
 
@@ -62,83 +62,79 @@ const Hero = () => {
     timeline.fromTo(
       buttonsContainerRef.current,
       { opacity: 0, scale: 0.9 },
-      { 
-        opacity: 1, 
-        scale: 1, 
-        duration: 0.8, 
-        ease: "back.out(1.7)"
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        ease: "back.out(1.7)",
       }
     );
 
     // Individual button animations
     timeline.fromTo(
       buttonsRef.current,
-      { 
-        opacity: 0, 
-        y: 50, 
+      {
+        opacity: 0,
+        y: 50,
       },
-      { 
-        opacity: 1, 
-        y: 0, 
+      {
+        opacity: 1,
+        y: 0,
         scale: 1,
-        duration: 0.5, 
-        ease: "power1.out"
+        duration: 0.5,
+        ease: "power1.out",
       },
       "-=0.4"
     );
   }, []);
 
   return (
-    <section className={`w-full text-white h-screen flex flex-col items-center justify-center ${isVisible ? 'opacity-100 ' : 'opacity-0'}  relative overflow-hidden`}>
+    <section
+      className={`w-full text-[#1a1a1a] h-screen flex flex-col items-center justify-center ${
+        isVisible ? "opacity-100 " : "opacity-0"
+      }  relative overflow-hidden`}
+    >
       {/* Main Text */}
       <div className="text-center px-3 overflow-hidden">
         <h1 className="text-5xl uppercase md:text-9xl font-bold">
-          <span
-            className="block"
-            ref={firstSpanRef}
-          >
-            design bold
+          <span className="block" ref={firstSpanRef}>
+            design <span className="text-red-800">bold</span>
           </span>
-          <span
-            className="block leading-[3.7rem]"
-            ref={secondSpanRef}
-          >
+          <span className="block leading-[3.7rem]" ref={secondSpanRef}>
             inspire the world
           </span>
         </h1>
         <p
-          className="text-lg font-medium md:text-xl max-w-lg mx-auto mt-12"
+          className="text-lg font-medium md:text-xl text-red-800 max-w-lg mx-auto mt-6 tracking-wide"
           ref={para}
         >
-          Empowering your brand with custom web development, design, illustrations, and data-driven digital marketing strategies.
+          Empowering your brand with custom web development, design,
+          illustrations, and data-driven digital marketing strategies.
         </p>
       </div>
 
       {/* Buttons */}
-      <div 
+      <div
         ref={buttonsContainerRef}
-        className={`flex md:flex-row flex-col gap-3 justify-between w-full px-14 mt-20 ${!isAnimationComplete ? 'opacity-0 ' : ''}`}
+        className={`flex md:flex-row flex-col gap-3 justify-between w-full px-14 mt-20 ${
+          !isAnimationComplete ? "opacity-0 " : ""
+        }`}
       >
         <button
-          className="bg-transparent border-2 border-white font-bold text-lg py-3 px-10 rounded-3xl text-white hover:bg-white hover:text-black transition"
+          className="bg-transparent border-2 border-[#1a1a1a] font-bold text-lg py-3 px-10 rounded-full text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white transition"
           ref={(el) => (buttonsRef.current[0] = el)}
         >
-           <Link
-                
-                href="#work"
-                className="mb-1 hover:scale-105 transition-all"
-              >
-                Explore work
-              </Link>
+          <Link href="#work" className="mb-1 hover:scale-105 tracking-wide transition-all">
+            Explore work
+          </Link>
         </button>
         <Link
-          className="bg-white text-black hover:bg-transparent text-center hover:text-white py-3 px-10 font-bold rounded-3xl text-xl hover:border-2 transition"
+          className="bg-[#1a1a1a] text-white hover:bg-transparent tracking-wide text-center hover:text-[#1a1a1a] py-3 px-10 font-bold rounded-full text-xl hover:border-2 hover:border-[#1a1a1a] transition"
           ref={(el) => (buttonsRef.current[1] = el)}
           target="_blank"
           href="mailto:info@designondemand.solutions"
-                  >
-                    Get in touch
-          
+        >
+          Get in touch
         </Link>
       </div>
     </section>

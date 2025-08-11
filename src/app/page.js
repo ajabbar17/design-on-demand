@@ -1,40 +1,11 @@
-"use client";
-import ServicesSection from "./components/ServiceSection";
-import Recent from "./components/Recent";
-import Works from "./components/Works";
-import { useEffect,  useState } from "react";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Loading from "./components/Loading";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import React from "react";
+import HomeContent from "./components/HomeComponent";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
- 
-
-  useEffect(() => {
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-
-  
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
 
   return (
-    <div className="bg-[#1b1f23]">
-      <Navbar />
-      <Hero />
-      <About />
-      <ServicesSection />
-      <Recent />
-      <Works />
-      <Footer />
+    <div className="bg-[#f8f9fa] text-[#1a1a1a]">
+      <HomeContent />
     
     </div>
   );

@@ -1,12 +1,13 @@
-import Footer from '@/app/components/Footer';
-import Navbar from '@/app/components/Navbar';
-import Projects from '@/app/components/Projects';
-import ServiceCard from '@/app/components/ServiceCard';
-import React from 'react';
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
+import Projects from "@/app/components/Projects";
+import ServiceCard from "@/app/components/ServiceCard";
+import React from "react";
 
 export const metadata = {
   title: "Web Design",
-  description: "Craft stunning websites with our innovative web design services. We create visually appealing and user-friendly designs that reflect your brand and engage your audience.",
+  description:
+    "Craft stunning websites with our innovative web design services. We create visually appealing and user-friendly designs that reflect your brand and engage your audience.",
   keywords: [
     "web design",
     "website design",
@@ -17,7 +18,7 @@ export const metadata = {
     "creative web design",
     "professional web design",
     "user-friendly websites",
-    "digital design"
+    "digital design",
   ],
   robots: {
     index: true,
@@ -25,17 +26,17 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1
-    }
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: "https://www.designondemand.solutions/web-design"
-  }
+    canonical: "https://www.designondemand.solutions/web-design",
+  },
 };
 
 const page = () => {
   const webDesignData = {
-    imageUrl: "/webdev.jpg", // Add a relevant image to your public folder
+    imageUrl: "/webdev.webp", // Add a relevant image to your public folder
     heading: "Web Design",
     breadcrumb: "Home > Web Design",
     title: "Craft Stunning Websites With Innovative Web Design Services",
@@ -48,13 +49,16 @@ const page = () => {
     `,
   };
   const projectData = {
-    img1: "/design-mockup.png",
+    img1: "/design-mockup.webp",
     title1: "H2SIP",
     tags1: ["WEB-DESIGN", "FIGMA"],
-  }
+    img2: "/design3.webp",
+    title2: "DESIGN BOX",
+    tags2: ["WEB-DESIGN", "FIGMA"],
+  };
 
   return (
-    <div>
+    <div className="bg-[#f8f9fa] text-[#1a1a1a] min-h-screen">
       <Navbar />
       <ServiceCard {...webDesignData} />
       <Projects {...projectData} />

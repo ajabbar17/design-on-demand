@@ -1,11 +1,12 @@
-import Footer from '@/app/components/Footer';
-import Navbar from '@/app/components/Navbar';
-import ServiceCard from '@/app/components/ServiceCard';
-import React from 'react';
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
+import ServiceCard from "@/app/components/ServiceCard";
+import React from "react";
 
 export const metadata = {
   title: "Video Editing",
-  description: "Bring your vision to life with our exceptional video editing services. From marketing to storytelling, we create visually stunning content that aligns with your vision.",
+  description:
+    "Bring your vision to life with our exceptional video editing services. From marketing to storytelling, we create visually stunning content that aligns with your vision.",
   keywords: [
     "video editing",
     "video production",
@@ -16,7 +17,7 @@ export const metadata = {
     "visual content",
     "professional editing",
     "video projects",
-    "editing expertise"
+    "editing expertise",
   ],
   robots: {
     index: true,
@@ -24,12 +25,12 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1
-    }
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: "https://www.designondemand.solutions/video-editing"
-  }
+    canonical: "https://www.designondemand.solutions/video-editing",
+  },
 };
 
 const page = () => {
@@ -49,7 +50,7 @@ const page = () => {
   };
 
   return (
-    <div>
+    <div className="bg-[#f8f9fa] text-[#1a1a1a] min-h-screen">
       <Navbar />
       <ServiceCard {...videoEditingData} />
       <Footer />

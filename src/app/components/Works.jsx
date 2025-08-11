@@ -14,21 +14,45 @@ const Works = () => {
 
   // Section 1 animations
   const section1ImageX = useTransform(scrollYProgress, [0.07, 0.24], [500, 0]);
-  const section1ImageRotate = useTransform(scrollYProgress, [0.07, 0.24], [15, 0]);
+  const section1ImageRotate = useTransform(
+    scrollYProgress,
+    [0.07, 0.24],
+    [15, 0]
+  );
   const section1TextY = useTransform(scrollYProgress, [0.02, 0.24], [300, 0]);
-  const section1TextOpacity = useTransform(scrollYProgress, [0.07, 0.24], [0, 1]);
+  const section1TextOpacity = useTransform(
+    scrollYProgress,
+    [0.07, 0.24],
+    [0, 1]
+  );
 
   // Section 2 animations
   const section2ImageX = useTransform(scrollYProgress, [0.22, 0.48], [-500, 0]);
-  const section2ImageRotate = useTransform(scrollYProgress, [0.22, 0.48], [-15, 0]);
+  const section2ImageRotate = useTransform(
+    scrollYProgress,
+    [0.22, 0.48],
+    [-15, 0]
+  );
   const section2TextY = useTransform(scrollYProgress, [0.17, 0.48], [300, 0]);
-  const section2TextOpacity = useTransform(scrollYProgress, [0.22, 0.48], [0, 1]);
+  const section2TextOpacity = useTransform(
+    scrollYProgress,
+    [0.22, 0.48],
+    [0, 1]
+  );
 
   // Section 3 animations
   const section3ImageX = useTransform(scrollYProgress, [0.5, 0.74], [500, 0]);
-  const section3ImageRotate = useTransform(scrollYProgress, [0.5, 0.74], [15, 0]);
+  const section3ImageRotate = useTransform(
+    scrollYProgress,
+    [0.5, 0.74],
+    [15, 0]
+  );
   const section3TextY = useTransform(scrollYProgress, [0.45, 0.74], [300, 0]);
-  const section3TextOpacity = useTransform(scrollYProgress, [0.5, 0.74], [0, 1]);
+  const section3TextOpacity = useTransform(
+    scrollYProgress,
+    [0.5, 0.74],
+    [0, 1]
+  );
 
   return (
     <div ref={ref} id="work" className="">
@@ -38,7 +62,7 @@ const Works = () => {
           {/* Left Text */}
           <div className="text-center w-full md:text-left">
             <motion.h1
-              className="text-4xl md:text-8xl font-extrabold text-white"
+              className="text-4xl md:text-8xl font-extrabold text-[#1a1a1a]"
               style={{
                 y: section1TextY,
                 opacity: section1TextOpacity,
@@ -47,13 +71,15 @@ const Works = () => {
               RO FOOTBALL CLUB
             </motion.h1>
             <motion.p
-              className="text-lg md:text-2xl text-gray-400 mt-4"
+              className="text-lg md:text-2xl tracking-wide text-gray-600 mt-4"
               style={{
                 y: section1TextY,
                 opacity: section1TextOpacity,
               }}
             >
-              Designed and delivered dynamic social media posters for Ro Football Club, showcasing the spirit of the game through bold visuals and engaging content.
+              Designed and delivered dynamic social media posters for Ro
+              Football Club, showcasing the spirit of the game through bold
+              visuals and engaging content.
             </motion.p>
           </div>
           {/* Right Image */}
@@ -66,7 +92,7 @@ const Works = () => {
               }}
             >
               <Image
-                src="/Ro.png"
+                src="/Ro.webp"
                 width={500}
                 height={375}
                 alt="Project Mockup"
@@ -90,7 +116,7 @@ const Works = () => {
               }}
             >
               <Image
-                src="/Testimonial.jpg"
+                src="/Testimonial.webp"
                 width={800}
                 height={800}
                 alt="Project Mockup"
@@ -101,7 +127,7 @@ const Works = () => {
           {/* Right Text */}
           <div className="text-center md:text-right">
             <motion.h1
-              className="text-4xl md:text-8xl font-extrabold text-white"
+              className="text-4xl md:text-8xl font-extrabold text-[#1a1a1a]"
               style={{
                 y: section2TextY,
                 opacity: section2TextOpacity,
@@ -110,13 +136,14 @@ const Works = () => {
               Street Cop Training
             </motion.h1>
             <motion.p
-              className="text-lg md:text-2xl text-gray-400 mt-4"
+              className="text-lg md:text-2xl tracking-wide text-gray-600 mt-4"
               style={{
                 y: section2TextY,
                 opacity: section2TextOpacity,
               }}
             >
-              Crafted impactful testimonial designs for Street Cop Training, highlighting real-life success stories and experiences.
+              Crafted impactful testimonial designs for Street Cop Training,
+              highlighting real-life success stories and experiences.
             </motion.p>
           </div>
         </div>
@@ -128,7 +155,7 @@ const Works = () => {
           {/* Left Text */}
           <div className="text-center md:text-left">
             <motion.h1
-              className="text-4xl md:text-8xl font-extrabold text-white"
+              className="text-4xl md:text-8xl font-extrabold text-[#1a1a1a]"
               style={{
                 y: section3TextY,
                 opacity: section3TextOpacity,
@@ -137,13 +164,15 @@ const Works = () => {
               KNOCK
             </motion.h1>
             <motion.p
-              className="text-lg md:text-2xl text-gray-400 mt-4"
+              className="text-lg md:text-2xl tracking-wide text-gray-600 mt-4"
               style={{
                 y: section3TextY,
                 opacity: section3TextOpacity,
               }}
             >
-              Designed and delivered Google Ads for Knock that captivate and convert, crafted with precision to ensure impactful visuals and clear messaging that drive results.
+              Designed and delivered Google Ads for Knock that captivate and
+              convert, crafted with precision to ensure impactful visuals and
+              clear messaging that drive results.
             </motion.p>
           </div>
           {/* Right Image */}
@@ -156,7 +185,7 @@ const Works = () => {
               }}
             >
               <Image
-                src="/manager.png"
+                src="/manager.webp"
                 width={500}
                 height={375}
                 alt="Project Mockup"

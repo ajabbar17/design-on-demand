@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Loading = () => {
   const svgRef = useRef(null);
@@ -10,8 +10,8 @@ const Loading = () => {
 
   // Reset animation function
   const resetAnimation = () => {
-    const paths = svgRef.current.querySelectorAll('.path');
-    
+    const paths = svgRef.current.querySelectorAll(".path");
+
     // Reset initial styles
     paths.forEach((path) => {
       const length = path.getTotalLength();
@@ -28,18 +28,22 @@ const Loading = () => {
 
     paths.forEach((path) => {
       const length = path.getTotalLength();
-      tlRef.current.to(path, {
-        strokeDashoffset: 0,
-        duration: 3,
-        ease: "power2.inOut"
-      }, "<");
+      tlRef.current.to(
+        path,
+        {
+          strokeDashoffset: 0,
+          duration: 3,
+          ease: "power2.inOut",
+        },
+        "<"
+      );
     });
   };
 
   // Initial setup and first animation
   useEffect(() => {
-    const paths = svgRef.current.querySelectorAll('.path');
-    
+    const paths = svgRef.current.querySelectorAll(".path");
+
     paths.forEach((path) => {
       const length = path.getTotalLength();
       // Set initial styles
@@ -66,7 +70,7 @@ const Loading = () => {
   return (
     <div
       ref={containerRef}
-      className="w-screen h-screen flex ps-10 justify-center items-center bg-[#1b1f23] opacity-0"
+      className="w-screen h-screen flex ps-10 justify-center items-center bg-[#f8f9fa] opacity-0"
     >
       <svg
         ref={svgRef}
@@ -79,7 +83,7 @@ const Loading = () => {
           {`
             .st4 {
               fill: none;
-              stroke: #FFFFFF;
+              stroke: #000000;
               stroke-width: 12;
               stroke-miterlimit: 10;
             }

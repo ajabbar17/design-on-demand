@@ -1,12 +1,13 @@
-import Footer from '@/app/components/Footer';
-import Navbar from '@/app/components/Navbar';
-import Projects from '@/app/components/Projects';
-import ServiceCard from '@/app/components/ServiceCard';
-import React from 'react';
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
+import Projects from "@/app/components/Projects";
+import ServiceCard from "@/app/components/ServiceCard";
+import React from "react";
 
 export const metadata = {
   title: "Illustration",
-  description: "Transform your ideas with our custom illustration services. From digital art to hand-drawn designs, we create unique illustrations that tell your story and bring your vision to life.",
+  description:
+    "Transform your ideas with our custom illustration services. From digital art to hand-drawn designs, we create unique illustrations that tell your story and bring your vision to life.",
   keywords: [
     "custom illustration",
     "digital illustration",
@@ -17,7 +18,7 @@ export const metadata = {
     "creative artwork",
     "digital art",
     "custom art design",
-    "professional illustrator"
+    "professional illustrator",
   ],
   robots: {
     index: true,
@@ -25,17 +26,17 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1
-    }
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: "https://www.designondemand.solutions/illustration"
-  }
+    canonical: "https://www.designondemand.solutions/illustration",
+  },
 };
 
 const page = () => {
   const illustrationData = {
-    imageUrl: "/illustrator.jpg",
+    imageUrl: "/illustrator.webp",
     heading: "Illustration",
     breadcrumb: "Home > Illustration",
     title: "Unleash Creativity With Custom Illustration Services",
@@ -49,19 +50,21 @@ const page = () => {
   };
 
   const projectData = {
-    img1: "/ill1.png",
-    img2: "/ill2.png",
+    img1: "/ill1.webp",
+    img2: "/ill2.webp",
     title1: "DAY-DAWN-NIGHT",
     title2: "HERITAGE",
     tags1: ["CONCEPT ART", "ILLUSTRATION", "TIME"],
     tags2: ["REALITY", "HERITAGE", "ILLUSTRATION"],
-  }
+  };
 
   return (
-    <div>
+    <div className="bg-[#f8f9fa] text-[#1a1a1a] min-h-screen">
       <Navbar />
       <ServiceCard {...illustrationData} />
-      <h1 className="text-center text-5xl md:text-7xl text-white font-semibold mt-20">Our Projects</h1>
+      {/* <h1 className="text-center text-5xl md:text-7xl text-[#1a1a1a] font-semibold mt-20">
+        Our Projects
+      </h1> */}
       <Projects {...projectData} />
       <Footer />
     </div>

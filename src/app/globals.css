@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 body{
-    background-color: #1b1f23;
+    background-color: #f8f9fa;
+    color: #1a1a1a;
     overflow-x: hidden;
+}
+
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll {
+  animation: scroll-right-to-left 15s linear infinite;
 }
