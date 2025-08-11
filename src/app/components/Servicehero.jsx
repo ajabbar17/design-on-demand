@@ -11,7 +11,7 @@ const Servicehero = () => {
           <div className="overflow-hidden">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight animate-slide-up">
               Digital Solutions <br />
-              <span className="text-emerald-600">Crafted</span> with Precision
+              <span className="text-red-800">Crafted</span> with Precision
             </h1>
           </div>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -21,8 +21,8 @@ const Servicehero = () => {
           </p>
           <div className="flex space-x-4">
             <button
-              className="border border-emerald-600 text-emerald-600 hover:bg-emerald-600/10 
-              font-bold py-3 px-10 rounded-lg transition duration-300"
+              className="border border-red-800 text-red-800 hover:scale-105 transition-transform 
+              font-bold py-3 px-10 rounded-lg  duration-300"
             >
               <Link
                 target="_blank"

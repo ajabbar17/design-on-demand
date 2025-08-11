@@ -34,7 +34,7 @@ const About = () => {
   ];
 
   return (
-    <section className="w-full text-[#1a1a1a] py-6 md:h-[550px] md:py-12 px-6 md:px-12">
+    <section className="w-full text-[#1a1a1a] py-6 lg:h-[650px] xl:h-[560px]   xl:py-12 px-6 md:px-12">
       <div className="flex gap-3 w-full items-center md:flex-row flex-col md:items-start">
         <div className="bg-[#e9ecef] h-6 mt-1 rounded-xl px-4">
           <p className="uppercase text-lg tracking-widest text-center text-red-800 font-bold">

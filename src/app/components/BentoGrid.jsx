@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const BentoGrid = () => {
@@ -32,11 +33,13 @@ const BentoGrid = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-xl overflow-hidden">
-            <img
-              src="/Ro.webp" // replace with actual image
+          <div className="bg-white  rounded-xl overflow-hidden">
+            <Image
+              src="/research.jpeg" // replace with actual image
               alt="Person working"
-              className="w-full h-full object-cover"
+              width={600}
+              height={400}
+              className="xl:h-[48vh] object-cover"
             />
           </div>
 
@@ -51,7 +54,7 @@ const BentoGrid = () => {
           </div>
 
           {/* Row 2 */}
-          <div className="bg-[url('/Ro.webp')] bg-cover bg-center rounded-xl h-full min-h-[360px]"></div>
+          <div className="bg-[url('/idea.jpeg')] bg-cover bg-center rounded-xl h-full min-h-[360px]"></div>
 
           <div className="bg-red-900 text-white rounded-xl p-9 md:col-span-2 flex flex-col justify-between">
             <h2 className="text-7xl font-bold mb-4">03.</h2>
@@ -91,10 +94,12 @@ const BentoGrid = () => {
             </p>
           </div>
           <div className="bg-white rounded-xl overflow-hidden">
-            <img
-              src="/Ro.webp" // replace with actual image
+            <Image
+              src="/launch.jpeg" // replace with actual image
               alt="Person working"
-              className="w-full h-full object-cover"
+              width={600}
+              height={400}
+              className="object-fill xl:h-[48vh]"
             />
           </div>
         </div>
