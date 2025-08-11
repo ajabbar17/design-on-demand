@@ -84,11 +84,11 @@ export default function ContactForm() {
         {/* Header Section */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-8xl font-bold text-black ">
-            Let's Work <span className="text-red-800">Together</span>
+            Let&apos;s Work <span className="text-red-800">Together</span>
           </h1>
           <p className="text-xl text-black max-w-2xl mx-auto leading-relaxed">
             Ready to elevate your digital presence? Get in touch with our team
-            and let's discuss how we can bring your vision to life.
+            and let&apos;s discuss how we can bring your vision to life.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function ContactForm() {
                 Get In Touch
               </h2>
               <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
-                We're here to help you transform your ideas into digital
+                We&apos;re here to help you transform your ideas into digital
                 reality. Reach out through any of the channels below or fill out
                 the form.
               </p>
@@ -114,20 +114,12 @@ export default function ContactForm() {
                 <div>
                   <p className="text-xl font-medium text-black mb-2">Email</p>
                   <p className="text-lg text-gray-600">
-                    hello@digitalagency.com
+                    info@designondemand.solutions
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-6">
-                <div className="w-16 h-16 bg-red-800 rounded-lg flex items-center justify-center">
-                  <Phone className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <p className="text-xl font-medium text-black mb-2">Phone</p>
-                  <p className="text-lg text-gray-600">+1 (555) 123-4567</p>
-                </div>
-              </div>
+              
             </div>
 
             {/* Social Media Section */}
@@ -290,7 +282,7 @@ export default function ContactForm() {
                   Message Sent!
                 </h3>
                 <p className="text-gray-600">
-                  Thank you for reaching out. We'll get back to you within 24
+                  Thank you for reaching out. We&apos;ll get back to you within 24
                   hours.
                 </p>
               </div>
