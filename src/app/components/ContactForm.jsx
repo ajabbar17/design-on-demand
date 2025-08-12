@@ -56,7 +56,7 @@ export default function ContactForm() {
         setIsSubmitted(true);
       } else {
         console.error("Form submission error:", result);
-        // Handle error case - you might want to show an error message
+        
       }
     } catch (error) {
       console.error("Network error:", error);
@@ -228,11 +228,12 @@ export default function ContactForm() {
                       <option value="">Select a service</option>
                       <option value="web-design">Web Design</option>
                       <option value="web-development">Web Development</option>
-                      <option value="mobile-app">Mobile App Development</option>
-                      <option value="branding">Branding & Identity</option>
+                      <option value="video-editing">Video Editing</option>
+                      <option value="branding">Branding</option>
                       <option value="digital-marketing">
                         Digital Marketing
                       </option>
+                      <option value="illustration">Illustration</option>
                       <option value="consultation">Consultation</option>
                     </select>
                   </div>

@@ -74,18 +74,24 @@ const Footer = () => {
           <div className="flex justify-between gap-0 p-2 px-7 md:px-4 md:justify-end md:gap-2">
             <div className="flex border-r-0 tracking-wide text-xl px-2 md:px-5 border-l flex-col">
               <span className="font-bold mb-2">[MENU]</span>
-              <a
+              <Link
                 href="/about"
                 className="mb-1 font-bold hover:scale-105 transition-all"
               >
                 ABOUT US
-              </a>
-              <a
+              </Link>
+              <Link
+                href="/contact"
+                className="mb-1 font-bold hover:scale-105 transition-all"
+              >
+                CONTACT
+              </Link>
+              <Link
                 href="/services"
                 className="font-bold hover:scale-105 transition-all"
               >
                 SERVICES
-              </a>
+              </Link>
             </div>
             <div className="flex border-l tracking-wide text-xl px-2 md:px-5 flex-col">
               <span className="font-bold mb-2">[CONTACT]</span>

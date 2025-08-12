@@ -43,8 +43,8 @@ const About = () => {
         </div>
         <h2 className="text-5xl font-bold mb-4">About our Company</h2>
       </div>
-      <div className="w-full gap-5 flex md:flex-row flex-col mx-auto">
-        <div className="mb-8 w-full md:w-1/2">
+      <div className="w-full gap-5 flex lg:flex-row flex-col mx-auto">
+        <div className="mb-8 w-full lg:w-1/2">
           <p className="leading-relaxed text-2xl text-center md:text-start md:text-4xl">
             At DESIGN ON DEMAND, we&apos;re more than just a digital services
             provider we&apos;re a team of{" "}
@@ -59,7 +59,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col gap-4">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           {accdata.map((item, index) => (
             <div
               key={index}

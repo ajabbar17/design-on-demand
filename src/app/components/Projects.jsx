@@ -84,7 +84,7 @@ const Projects = memo(({ img1, img2, title1, title2, tags1, tags2 }) => {
       {/* Card 1 */}
       <div className="cardcontainer flex flex-col gap-4 w-full xl:w-1/2 h-auto xl:h-[75vh] rounded">
         <div ref={card1Ref} className="card w-full h-full relative">
-          <h1 className="absolute left-1/2 -translate-x-1/2 md:left-full md:-translate-x-1/2 flex font-bold text-5xl md:text-8xl z-20 top-1/3 text-emerald-700">
+          <h1 className="absolute left-1/2 -translate-x-1/2 md:left-full md:-translate-x-1/2 flex font-bold text-5xl md:text-8xl z-20 top-1/3 text-red-800">
             {title1.split("").map((letter, index) => (
               <span
                 key={`${letter}-${index}`}
@@ -125,7 +125,7 @@ const Projects = memo(({ img1, img2, title1, title2, tags1, tags2 }) => {
       {title2 && (
         <div className="cardcontainer  flex flex-col gap-4 w-full xl:w-1/2 h-auto xl:h-[75vh] rounded">
           <div ref={card2Ref} className="card w-full h-full relative">
-            <h1 className="absolute left-1/2 -translate-x-1/2 md:right-full md:left-auto md:translate-x-1/2 flex font-bold text-6xl md:text-8xl z-20 top-1/3 text-emerald-700">
+            <h1 className="absolute left-1/2 -translate-x-1/2 md:right-full md:left-auto md:translate-x-1/2 flex font-bold text-6xl md:text-8xl z-20 top-1/3 text-red-800">
               {title2.split("").map((letter, index) => (
                 <span
                   key={`${letter}-${index}`}

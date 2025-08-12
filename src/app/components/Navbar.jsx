@@ -109,6 +109,13 @@ const Navbar = () => {
           >
             ABOUT
           </Link>
+          <Link
+            href="/contact"
+            onClick={toggleSidebar}
+            className="text-lg text-gray-900 hover:text-emerald-600 transition-colors duration-300"
+          >
+            CONTACT
+          </Link>
           <div>
             <div
               className="flex justify-between items-center text-lg text-gray-900 hover:text-emerald-600 cursor-pointer transition-colors duration-300"
