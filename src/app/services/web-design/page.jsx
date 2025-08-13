@@ -1,5 +1,6 @@
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
+import ProjectCard from "@/app/components/ProjectCard";
 import Projects from "@/app/components/Projects";
 import ServiceCard from "@/app/components/ServiceCard";
 import React from "react";
@@ -48,21 +49,35 @@ const page = () => {
       Build a digital presence that combines aesthetics with functionality seamlessly.
     `,
   };
-  const projectData = {
-    img1: "/design-mockup.webp",
-    title1: "H2SIP",
-    tags1: ["WEB-DESIGN", "FIGMA"],
-    img2: "/design3.webp",
-    title2: "DESIGN BOX",
-    tags2: ["WEB-DESIGN", "FIGMA"],
-  };
+
+  const projectData = [
+    {
+      img: "/design-mockup.webp",
+      title: "H2SIP",
+      tags: ["WEB-DESIGN", "FIGMA"],
+    },
+    {
+      img: "/design3.webp",
+      title: "DESIGN BOX",
+      tags: ["WEB-DESIGN", "FIGMA"],
+    },
+  ];
 
   return (
     <div className="bg-[#f8f9fa] text-[#1a1a1a] min-h-screen">
       <Navbar />
       <ServiceCard {...webDesignData} />
-      <Projects {...projectData} />
-
+      <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-7 pt-8 pb-20 lg:px-12 xl:px-24 p-7">
+        {projectData.map((project, index) => (
+          <ProjectCard
+            key={index}
+            index={index}
+            title={project.title}
+            img={project.img}
+            tags={project.tags}
+          />
+        ))}
+      </div>
       <Footer />
     </div>
   );

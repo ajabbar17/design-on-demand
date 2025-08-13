@@ -1,5 +1,6 @@
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
+import ProjectCard from "@/app/components/ProjectCard";
 import Projects from "@/app/components/Projects";
 import ServiceCard from "@/app/components/ServiceCard";
 import React from "react";
@@ -49,14 +50,29 @@ const page = () => {
     `,
   };
 
-  const projectData = {
-    img1: "/webproject.webp",
-    img2: "/myorah.webp",
-    title1: "PAIZLY",
-    title2: "MYORAH",
-    tags1: ["Web Development", "UI/UX", "ECOMMERCE"],
-    tags2: ["CMS", "UI/UX", "ECOMMERCE"],
-  };
+  const projectData = [
+    {
+      img: "/webproject.webp",
+      title: "PAIZLY",
+      tags: ["Web Development", "Shopify", "ECOMMERCE"],
+    },
+    {
+      img: "/myorah.webp",
+      title: "MYORAH",
+      tags: ["Web Development", "Shopify", "Ecommerce"],
+    },
+    {
+      img: "/um.webp",
+      title: "UM",
+      tags: ["Web Development", "Portfolio"],
+    },
+    {
+      img: "/fitness.webp",
+      title: "FITNESS APP",
+      tags: ["Web Development", "Health & Fitness"],
+    },
+   
+  ];
 
   return (
     <div className="bg-[#f8f9fa] text-[#1a1a1a] min-h-screen">
@@ -65,7 +81,17 @@ const page = () => {
       {/* <h1 className="text-center text-5xl md:text-7xl text-[#1a1a1a] font-semibold mt-20">
         Our Projects
       </h1> */}
-      <Projects {...projectData} />
+      <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-7 pt-8 pb-20 lg:px-12 xl:px-24 p-7">
+        {projectData.map((project, index) => (
+          <ProjectCard
+            key={index}
+            index={index}
+            title={project.title}
+            img={project.img}
+            tags={project.tags}
+          />
+        ))}
+      </div>
       <Footer />
     </div>
   );
